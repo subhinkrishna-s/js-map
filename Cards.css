@@ -1,0 +1,48 @@
+#container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card{
+    border: 1px solid gray;
+    box-shadow: 0 0 4px #868686;
+    border-radius: 12px ;
+    margin: 5px;
+}
+
+h2{
+    word-wrap: break-word;
+}
+
+.card img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+}
+
+.card-contents{
+    padding: 10px;
+}
+
+.card button{
+    padding: 4px 12px;
+    font-size: 18px;
+    border-radius: 6px;
+    background-color: black;
+    color: azure;
+    width: 100%;
+}
+
+
+@media (max-width: 300px){
+    .card{
+        width: 90%;
+    }
+}
+
+@media (min-width: 300px){
+    .card{
+        width: 250px;
+    }
+}

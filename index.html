@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards using map function</title>
+    <link rel="stylesheet" href="Cards.css">
+</head>
+<body>
+    <h1>JS MAP Function</h1>
+
+    <div id="container">
+
+    </div>
+
+
+    <script>
+        const cards = [
+            {
+                title: "Mountain Adventure",
+                description: "Explore the breathtaking mountain ranges and enjoy thrilling adventures.",
+                image: "https://img.freepik.com/premium-photo/trees-growing-forest_1048944-30368869.jpg?w=1380"
+            },
+            {
+                title: "Beach Paradise",
+                description: "Relax on the serene beaches and soak up the sun in a tropical paradise.",
+                image: "https://img.freepik.com/free-photo/beautiful-landscape-road-with-tall-trees_23-2148456486.jpg?t=st=1735543801~exp=1735547401~hmac=166aa59903c2749bac77cc1076ac403621befc862d5961407f50076d20a15cff&w=1380"
+            },
+            {
+                title: "City Lights",
+                description: "Discover the vibrant nightlife and cultural landmarks of a bustling city.",
+                image: "https://img.freepik.com/free-photo/dog-walking-dirt-road-forest_23-2147831035.jpg?t=st=1735543832~exp=1735547432~hmac=9df138cd30234ef3b0c9a0ae742bd5e56a9c682fa7bf3f834aed6e441f5b27df&w=1380"
+            },
+            {
+                title: "Desert Journey",
+                description: "Embark on a unique journey through the stunning desert landscapes.",
+                image: "https://img.freepik.com/free-photo/rural-round-surrounded-by-green-tropical-trees_23-2147830989.jpg?t=st=1735543852~exp=1735547452~hmac=4ac0c977c0800b5bd736cdc492ac2252e0cb4733c78011cec5dca1cf12bcaf31&w=1060"
+            },
+            {
+                title: "Forest Retreat",
+                description: "Reconnect with nature in a tranquil forest retreat with scenic trails.",
+                image: "https://img.freepik.com/free-photo/elevated-view-winding-road-forest_23-2147830994.jpg?t=st=1735543880~exp=1735547480~hmac=8ac7d520508804385878ef5c6278646f872b4ef32244f813a98d6c3b79323f0a&w=1060"
+            },
+            {
+                title: "Cultural Heritage",
+                description: "Dive into the rich history and traditions of an ancient culture.",
+                image: "https://img.freepik.com/free-photo/elevated-view-forest-mountain_23-2147830990.jpg?t=st=1735543903~exp=1735547503~hmac=45f2f1807ed2d19a942a0e3b59a2f3edcf0564b8dc1cabfaf55525f3ef4c4ee1&w=1060"
+            },
+            {
+                title: "Cultural Heritage",
+                description: "Dive into the rich history and traditions of an ancient culture.",
+                image: "https://img.freepik.com/free-photo/elevated-view-forest-mountain_23-2147830990.jpg?t=st=1735543903~exp=1735547503~hmac=45f2f1807ed2d19a942a0e3b59a2f3edcf0564b8dc1cabfaf55525f3ef4c4ee1&w=1060"
+            }
+        ];
+
+        const containerElement = document.getElementById("container")
+
+
+
+         cards.forEach(item=>{
+            const cardElement = document.createElement('div')
+            const imgElement = document.createElement('img')
+            const contentContainerElement = document.createElement('div')
+            const titleElement = document.createElement('h2')
+            const descElement = document.createElement('p')
+            const buttonElement = document.createElement('button')
+
+            cardElement.classList.add('card')
+            contentContainerElement.classList.add('card-contents')
+
+            cardElement.appendChild(imgElement)
+            cardElement.appendChild(contentContainerElement)
+            contentContainerElement.appendChild(titleElement)
+            contentContainerElement.appendChild(descElement)
+            contentContainerElement.appendChild(buttonElement)
+
+
+            imgElement.src=item.image
+            titleElement.innerText=item.title
+            descElement.innerText=item.description
+            buttonElement.innerText="View"
+            containerElement.appendChild(cardElement)
+        })
+
+    </script>
+</body>
+</html>
